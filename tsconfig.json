@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2020",
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "allowJs": true,
+    "allowJs": false,
     "importHelpers": true,
     "jsx": "react",
     "alwaysStrict": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
@@ -18,11 +18,13 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "typeRoots": [ "./types", "./node_modules/@types"]
+    "typeRoots": [ "./types", "./node_modules/@types"],
+    "rootDir": "./lambda",
+    "outDir": "./build",
+    "removeComments": true
   },
   "exclude": ["node_modules", "types"],
   "include": [
-    "src/**/*",
-    "types/**/*.ts"
+    "lambda/**/*"
   ]
 }
